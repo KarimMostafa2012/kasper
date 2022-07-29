@@ -433,9 +433,10 @@ header .container {
 .portfolio .contain .tool_bar span {
     padding: 10px;
     cursor: pointer;
-    border-radius: 40% 00% 40% 0%;
+    border-radius: 40% 0% 40% 0%;
     margin-right: 10px;
     transition: 0.3s;
+    min-width: fit-content;
 }
 
 .portfolio .contain .tool_bar span:first-child {
@@ -445,7 +446,6 @@ header .container {
 
 .portfolio .contain .tool_bar span:hover {
     color: white;
-    border-radius: 40% 0% 40% 0%;
     margin-right: 10px;
     background-color: #19c8fa;
 }
@@ -547,14 +547,14 @@ header .container {
 .landing-2 .container .color p button {
     font-size: 15px;
     margin: 30px 0px 50px;
-    border:none;
     background-color: black;
+    border: none;
 }
 
 .landing-2 .container .color p button a {
     color: white;
-    display:block;
-    padding:12px 17px;
+    display: block;
+    padding: 12px 17px;
     text-decoration: none;
 }
 
@@ -901,31 +901,37 @@ header .container {
 
 .sec-3 .right .adobe::before,
 .sec-3 .right .php::before {
-    right: 7.7%;
+    right: 10%;
+    transform: translateX(50%);
 }
 
 .sec-3 .right .html::before {
-    right: 12.7%;
+    right: 15%;
+    transform: translateX(50%);
 }
 
 .sec-3 .right .javascript::before {
-    right: 17.7%;
+    right: 20%;
+    transform: translateX(50%);
 }
 
 .sec-3 .right .adobe::after,
 .sec-3 .right .php::after {
     content: "90%";
-    right: 5.7%;
+    right: 10%;
+    transform: translateX(50%);
 }
 
 .sec-3 .right .html::after {
     content: "85%";
-    right: 10.5%;
+    right: 15%;
+    transform: translateX(50%);
 }
 
 .sec-3 .right .javascript::after {
     content: "80%";
-    right: 15.5%;
+    right: 20%;
+    transform: translateX(50%);
 }
 
 .sec-3 .left .dots {
@@ -1100,6 +1106,12 @@ header .container {
 
 .pricing .container {
     padding: 50px 0px;
+}
+
+button:hover,
+#btn:hover {
+    background-color: #777;
+    cursor: pointer;
 }
 
 .pricing .container .prices~p:first-of-type {
@@ -1409,32 +1421,6 @@ header .container {
         width: 100%;
         max-width: 100%;
     }
-
-    .sec-3 .right .adobe::before,
-    .sec-3 .right .php::before {
-        right: 8.8%;
-    }
-
-    .sec-3 .right .html::before {
-        right: 13.7%;
-    }
-
-    .sec-3 .right .javascript::before {
-        right: 18.7%;
-    }
-
-    .sec-3 .right .html::after {
-        right: 12.5%;
-    }
-
-    .sec-3 .right .adobe::after,
-    .sec-3 .right .php::after {
-        right: 7.7%;
-    }
-
-    .sec-3 .right .javascript::after {
-        right: 17.5%;
-    }
 }
 
 @media (max-width: 768px) {
@@ -1574,31 +1560,30 @@ header .container {
     .contact .container .descripe .where {
         margin-left: 0px;
     }
+}
 
-    @media (max-width:425px) {
-        .landing-2 .container .color {
-            background-color: #0f748f6b;
-        }
+@media (max-width:425px) {
+    .landing-2 .container .color {
+        background-color: #0f748f6b;
+    }
 
-        .parag {
-            padding: 2% 1%;
-            text-align: center;
-        }
+    .parag {
+        padding: 2% 1%;
+        text-align: center;
+    }
 
-        .fa-bars.toggle-menu {
-            right: 70px;
-        }
+    .fa-bars.toggle-menu {
+        right: 70px;
+    }
 
-        .fa-magnifying-glass::after {
-            left: -45%;
-            right: 0%;
-        }
+    .fa-magnifying-glass::after {
+        left: -45%;
+        right: 0%;
+    }
 
-        .portfolio .contain .tool_bar span {
-            text-align: center;
-            width: calc(20% - 15px);
-        }
-
+    .portfolio .contain .tool_bar span {
+        text-align: center;
+        width: calc(20% - 15px);
     }
 
 }
